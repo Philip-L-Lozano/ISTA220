@@ -1,0 +1,48 @@
+### Philip Lozano
+### C# Homework 15
+### 24 February 2021
+
+1/2. A property is a cross between a fi eld and a method—it looks like a fi eld but acts as a method. You
+access a property by using the same syntax that you use to access a fi eld. However, the compiler automatically translates this fi eld-like syntax into calls to accessor methods (sometimes referred to as
+property getters and property setters).
+```
+AccessModifier Type PropertyName
+{
+	get
+	{
+		// read accessor code
+	}
+	set
+	{
+		// write accessor code
+	}
+}
+```
+
+3. Encapsulation is the sealing off of a certain section of code and its collective implementation so that it cannot 
+be accessed accidentaly or inappropiately.
+
+4. Distinguishing identifiers soley by uppercase or lowercase first letters is fine for simplet programs or easily 
+traceable paths on the same viewable page, however, doing so in a manner that is not easily traced makes code very
+confusing and difficult to understand. In these cases, more unique and intuative nomenclature should be used.
+
+5. Source code, directions, or system messages are all examples of code that should be read only. Input to functions
+or user data are examples of code that should be write only.
+
+6. Getters and Setters shouldn't be private because it would either limit or defeat its purpose of allowing limited
+access while concealing its sensative code.
+
+7. Properties can't be passed as ref or out parameters and they also can't be overloaded.
+
+8. When you create an instance of a class, you can initialize it by specifying the names and values for
+any public properties that have set accessors.
+```
+Triangle tri1 = new Triangle { Side3Length = 15 };
+Triangle tri2 = new Triangle { Side1Length = 15, Side3Length = 20 };
+Triangle tri3 = new Triangle { Side2Length = 12, Side3Length = 17 };
+Triangle tri4 = new Triangle { Side1Length = 9, Side2Length = 12, Side3Length = 15 };
+```
+This syntax is known as an *object initializer*. When you invoke an object initializer in this way,
+the C# compiler generates code that calls the default constructor and then calls the set accessor of
+each named property to initialize it with the value specified. You can specify object initializers in
+combination with non-default constructors as well.

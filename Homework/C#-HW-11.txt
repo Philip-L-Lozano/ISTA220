@@ -1,0 +1,35 @@
+### Philip Lozano
+### C# Homework 11
+### 18 February 2021
+
+1. A *parameter array* allows a procedure to accept an array of values for a parameter. You do not have to know 
+the number of elements in the parameter array when you define the procedure.
+
+2. Using a params array, you can pass a variable number of arguments to a method. You indicate a params
+array by using the params keyword as an array parameter modifier when you define the method parameters.
+
+3. The effect of the params keyword on a method is that it allows you to call the method by
+using any number of integer arguments without worrying about creating an array.
+
+4. An array always has a set number of values so it cannot pass an arbitrary number.
+
+5. There is no limit to how many parameters a method can have.
+
+6. No. Parameter arrays do not have to have the same type. They are able to pass any arguments to parameters 
+because they can box the data onto the heap and pass the argument as an object type to the parameter.
+
+7. Firstly, a method that takes optional parameters still has a fixed parameter list, and you cannot pass an arbitrary 
+list of arguments. Secondly, a method that takes optional parameters still has a fi xed parameter list, and you cannot 
+pass an arbitrary list of arguments.
+
+8. A params array must be the last parameter. (This means that you can have only one params
+array per method.) A non-params method always takes priority over a params method. This means that you can
+still create an overloaded version of a method for common cases.
+
+9. 
+``` 
+public static int Min(params int[] paramList)
+
+10.
+```
+public static void Hole(params object[] paramList)

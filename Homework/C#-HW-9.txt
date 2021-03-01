@@ -1,0 +1,158 @@
+### Philip Lozano
+### C# Homework 9
+### 9 February 2021
+
+1. You define an enumeration by using the *enum* keyword, followed by a set of symbols identifying the
+legal values that the type can have, enclosing them between braces. e.x.
+```
+enum Season { Spring, Summer, Fall, Winter }
+```
+
+2. 
+```
+enum Ranks {PV1, PV2, PV3, SPC, CPL, SGT, SSG, SFC, MSG, 1SG, SGM}
+class Example
+	
+```
+3. 
+```
+enum Ranks {PV1, PV2, PV3, SPC, CPL, SGT, SSG, SFC, MSG, 1SG, SGM}
+class Example
+	public void AssignRank(rank)
+	{
+		{
+			Ranks Phil = Ranks.SSG;
+			Ranks Friend = Ranks.SSG;
+		}
+	}
+```
+4. 
+```
+enum Ranks {PV1=1, PV2, PV3, SPC/CPL, SGT, SSG, SFC, MSG/1SG, SGM}
+class Example
+	public void Index(rank)
+	{
+		{
+			Ranks private1 = Ranks.PV1;
+			ConsolWriteline((int)private1);
+			Ranks e-sfc = Ranks.SFC;
+			ConsoleWriteline((inte-sfc);
+			
+		}
+	}
+```
+5. When you declare an enumeration, the enumeration literals are given values of type int. You can also 
+choose to base your enumeration on a different underlying integer type. You can base an enumeration on any 
+of the eight integer types: byte, sbyte, short, ushort, int, uint, long, or ulong. The values of all the 
+enumeration literals must fit within the range of the chosen base type.
+
+6. Classes define reference types that are always created on the heap. In some cases, the class can contain 
+so little data that the overhead of managing the heap becomes disproportionate. In these cases, it is better 
+to define the type as a structure. A structure is a value type. Because structures are stored on the stack, 
+as long as the structure is reasonably small, the memory management overhead is often reduced.
+
+7. Differences between classes and structs:
+	1. You can’t declare a default constructor (a constructor with no parameters) for a structure.
+	2. In a class, you can initialize instance fields at their point of declaration. In a structure, you cannot.
+	3. Inheritance issues
+	
+8. Structures and enums are stored on the stack.
+
+9. Fields:  
+MaxValue - Represents the largest possible value of an Int32. This field is constant.
+
+MinValue - Represents the smallest possible value of Int32. This field is constant.
+
+
+Methods:
+CompareTo(Int32) 	
+Compares this instance to a specified 32-bit signed integer and returns an indication of their relative values.
+
+CompareTo(Object) 	
+Compares this instance to a specified object and returns an indication of their relative values.
+
+Equals(Int32) 	
+Returns a value indicating whether this instance is equal to a specified Int32 value.
+
+Equals(Object) 	
+Returns a value indicating whether this instance is equal to a specified object.
+
+GetHashCode() 	
+Returns the hash code for this instance.
+
+GetTypeCode() 	
+Returns the TypeCode for value type Int32.
+
+Parse(ReadOnlySpan<Char>, NumberStyles, IFormatProvider) 	
+Converts the span representation of a number in a specified style and culture-specific format to its 
+32-bit signed integer equivalent.
+
+Parse(String) 	
+Converts the string representation of a number to its 32-bit signed integer equivalent.
+
+Parse(String, IFormatProvider) 	
+Converts the string representation of a number in a specified culture-specific format to its 32-bit 
+signed integer equivalent.
+
+Parse(String, NumberStyles) 	
+Converts the string representation of a number in a specified style to its 32-bit signed integer equivalent.
+
+Parse(String, NumberStyles, IFormatProvider) 	
+Converts the string representation of a number in a specified style and culture-specific format to its 32-bit 
+signed integer equivalent.
+
+ToString() 	
+Converts the numeric value of this instance to its equivalent string representation.
+
+ToString(IFormatProvider) 	
+Converts the numeric value of this instance to its equivalent string representation using the specified 
+culture-specific format information.
+
+ToString(String) 	
+Converts the numeric value of this instance to its equivalent string representation, using the specified format.
+
+ToString(String, IFormatProvider) 	
+Converts the numeric value of this instance to its equivalent string representation using the specified format 
+and culture-specific format information.
+
+TryFormat(Span<Char>, Int32, ReadOnlySpan<Char>, IFormatProvider) 	
+Tries to format the value of the current integer number instance into the provided span of characters.
+
+TryParse(ReadOnlySpan<Char>, Int32) 	
+Converts the span representation of a number in a specified style and culture-specific format to its 32-bit 
+signed integer equivalent. A return value indicates whether the conversion succeeded.
+
+TryParse(ReadOnlySpan<Char>, NumberStyles, IFormatProvider, Int32) 	
+Converts the span representation of a number in a specified style and culture-specific format to its 32-bit 
+signed integer equivalent. A return value indicates whether the conversion succeeded.
+
+TryParse(String, Int32) 	
+Converts the string representation of a number to its 32-bit signed integer equivalent. A return value indicates 
+whether the conversion succeeded.
+
+TryParse(String, NumberStyles, IFormatProvider, Int32) 	
+Converts the string representation of a number in a specified style and culture-specific format to its 32-bit 
+signed integer equivalent. A return value indicates whether the conversion succeeded.
+
+10. 
+```
+struct DOD
+{
+	private int Army, Navy, AirForce, CoastGuard;
+}
+```
+
+11. The reason you can’t declare your own default constructor for a structure is that the compiler always 
+generates one. In a class, the compiler generates the default constructor only if you
+don’t write a constructor yourself. The compiler-generated default constructor for a structure
+always sets the fields to 0, false, or null—just as for a class. Therefore, you should ensure that a
+structure value created by the default constructor behaves logically and makes sense with these
+default values.
+
+12. When you run a C# application, the CLR (Common Language Runtime) takes responsibility for converting the 
+CIL (Common Intermediate Language) instructions into real machine instructions that the processor on your 
+computer can understand and execute. This whole environment is known as the managed execution environment, 
+and C# programs are frequently referred to as managed code.
+
+
+

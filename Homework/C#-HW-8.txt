@@ -1,0 +1,48 @@
+### Philip Lozano
+### C# Homework 8
+### 3 February 2021
+
+1. A shallow copy (where you copy only the reference) constructs a new compound object and then (to the extent possible) inserts references 
+into it to the objects found in the original. A deep copy constructs a new compound object and then, 
+recursively, inserts copies into it of the objects found in the original.
+
+2. The value of a reference when initialized is exactly the same as the variable it is referencing, however,
+its value does not change automoatically in the event that the value of the referenced variable changes. 
+
+3. Declare a value type by assigning it to a variable.
+
+4. Declare a reference type by assigning a variable to another variable of the same class that contains the
+memory address of an object.
+
+5. No. If attempting to assign an object to a value type, you will get a Null Exception returned. 
+(Check pg. 95 in book)
+
+6. In C#, you can assign the null value to any reference variable. The null value simply means that the
+variable does not refer to an object in memory.
+
+7. Memory from the stack is used in the execution of methods and lasts only as long as the method is executing.
+Once the method is finished, the memory is released back to the stack. When you create an object (an instance 
+of a class) by using the new keyword, the memory required to build the object is always acquired from the heap. 
+When the last reference to an object disappears, the memory used by the object becomes available again
+(although it might not be reclaimed immediately).
+
+All value types are created on the stack. All reference types (objects) are created on
+the heap (although the reference itself is on the stack). Nullable types are actually reference
+types, and they are created on the heap.
+
+8. Specialized types can be used to create variables that can refer to any reference type.
+
+9. The *ref* keyword indicates a value that is passed by reference. This makes the parameter an alias
+for the actual argument rather than a copy of the argument. The method may change the value of the parameter, 
+and this change is made to the actual argument rather than to a local copy.
+
+10. Passing an argument to an *out* parameter makes the parameter an alias for the actual argument rather 
+than a copy of the argument. The method must assign a value to the parameter, and this value is made to the 
+actual argument.
+
+11. Object variables can refer to both reference and value types. Automatic copying of an object from stack to 
+heap is known as *boxing*. In this way, objects can refer to "boxed" value types. To *unbox* a boxed value type
+stored in the heap, you must tell the compiler to perform a data type check, known as a *cast*, on the object.
+
+12. *Cast* performs an operation that checks whether converting an item of one type to another is safe before 
+actually making a copy of a boxed value type. 

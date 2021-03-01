@@ -1,0 +1,52 @@
+### Philip Lozano
+### C# Homework 7
+### 2 February 2021
+
+1. Class is the root word of the term classification. When you design a class, you systematically arrange
+information and behavior into a meaningful entity. 
+
+2. *Encapsulation* is an important principle when defining classes. The idea is that a program that uses a
+class should not have to account for how that class actually works internally; the program simply creates an 
+instance of a class and calls the methods of that class. As long as those methods do what they are designed 
+to do, the program does not need to know how they are implemented. Encapsulation has 2 purposes:
+
+	- To combine methods and data within a class; in other words, to support classification
+	- To control the accessibility of the methods and data; in other words, to control the use of
+	  the class
+	 
+3. New classes are initialized with the keyword *new*. After creating a variable of a class type, you initialize
+it by assigning it a value or some valid data. C# does not allow for assigning literal class values
+to variables. 
+
+4. The default access of fields and methods in a class is *private* but this can be changed to allow code from 
+outside the class to access it by changing private to *public*.
+
+5. A *constructor* is a special method that runs automatically when you create an instance of a class. It
+has the same name as the class, and it can take parameters, but it cannot return a value (not even void).
+Every class must have a constructor. If you don’t write one, the compiler automatically generates a
+default constructor for you. Writing a constructor can be done by adding a public method that does not 
+return a value and giving it the same name as the class.
+
+6. A class is the definition of a type. An object is an instance of that type created when the program runs. 
+Several different objects can be instances of the same class. You can restrict class fields and methods by 
+classifying them as *private*.
+
+7. The purpose of a static class is purely to act as a holder of utility methods and fields.
+
+8. Anonymous classes are useful when using query expressions. 
+
+9. Polymorphism means "many forms", and it occurs when we have many classes that are related to each other 
+by inheritance.
+
+10. "Message Passing" is one way to describe OOP. Objects recieve "messages" which are calls to procedures 
+associated with them. 
+
+11. Simula (1967) was the first OOP language, which was used for making simulation programs that required
+a heavy focus on objects.
+
+12. Alexander Alexandrovich Stepanov is a Russian-American computer programmer, best known as an advocate 
+of generic programming and as the primary designer and implementer of the C++ Standard Template Library, 
+which he started to develop around 1992 while employed at HP Labs. I don't know enough about CS to really 
+know what my opinion would be but the fact that he decries the concept as being "not very interesting" is 
+a big red flag. Science and math are under no obligation to be beautiful or simple to express on a chalkboard.
+Many scientists have gone astray by an inability to resist the urge to embrace "beautiful" solutions. 

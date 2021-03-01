@@ -1,0 +1,72 @@
+### Philip Lozano
+### C# Homework 13
+### 23 February 2021
+
+1. An interface does not contain any code or data; it just specifies the methods and properties that a class that 
+inherits from the interface must provide. By using an interface, you can completely separate the names and signatures 
+of the methods of a class from the method’s implementation.
+
+2. Defining an interface is syntactically similar to defining a class, except that you use the interface
+keyword instead of the class keyword. 
+
+3. An interface cannot contain any data; you cannot add fields (not even private ones) to an interface.
+
+4. Within the interface, you declare methods exactly as in a class or structure, except that you never specify 
+an access modifier (public, private, or protected). Additionally, the methods in an interface have no implementation; 
+they are simply declarations, and all types that implement the interface must provide their own implementations. 
+Consequently, you replace the method body with a semicolon.
+
+5. No. You can not instantiate an object through an interface. It must be referenced with a variable outside the interface.
+
+6. In the same way that you can reference an object by using a variable defined as a class that is higher up the 
+hierarchy, you can reference an object by using a variable defined as an interface that the object’s class implements.
+
+7. A class can have at most one base class, but it is allowed to implement an unlimited number of interfaces. 
+A class must implement all the methods declared by these interfaces. If a structure or class implements more than 
+one interface, you specify the interfaces as a comma-separated list. If a class also has a base class, the interfaces 
+are listed *after* the base class. e.x.
+```
+class Horse : Mammal, ILandBound, IGrazable
+```
+
+8. In methods that implement multiple interfaces, C# does not distinguish which interface the method is 
+implementing, so the same method actually implements both interfaces. To disambiguate a method's implementation of
+a specific interface, interfaces can be implemented explicitly by stating the interface name and access modifier 
+in the method call.
+
+9. The essential idea to remember is that an interface never *contains* any implementation. As a result, this also means:
+
+* You’re not allowed to define any fields in an interface, not even static fields. A field is an
+implementation detail of a class or structure.
+* You’re not allowed to define any constructors in an interface. A constructor is also considered to
+be an implementation detail of a class or structure.
+* You’re not allowed to define a destructor in an interface. A destructor contains the statements
+used to destroy an object instance. 
+* You cannot specify an access modifier for any method. All methods in an interface are implicitly public.
+* You cannot nest any types (such as enumerations, structures, classes, or interfaces) inside an
+interface.
+* An interface is not allowed to inherit from a structure or a class, although an interface can
+inherit from another interface. Structures and classes contain implementation; if an interface
+were allowed to inherit from either, it would be inheriting some implementation.
+
+10. An abstract class is used to prevent the instantiation of itself when its sole purpose is to be inherited. 
+An interface cannot be instantiated and contains no implementation itself.
+
+11. An abstract class can contain abstract methods. An abstract method is similar in principle to a vir-
+tual method (covered in Chapter 12), except that it does not contain a method body. A derived class
+must override this method. An abstract method cannot be private.
+
+12. Unless you consciously design a class with the intention of using it as a base class, it’s extremely unlikely 
+that it will function well as a base class. With C#, you can use the sealed keyword to prevent a class from
+being used as a base class if you decide that it should not be.
+
+13. You can also use the sealed keyword to declare that an individual method in an unsealed class is sealed.
+This means that a derived class cannot override this method. You can seal only a method declared with
+the override keyword, and you declare the method as sealed override. You can think of the interface,
+virtual, override, and sealed keywords as follows:
+* An interface introduces the name of a method.
+* A virtual method is the fi rst implementation of a method.
+* An override method is another implementation of a method.
+* A sealed method is the last implementation of a method.
+
+

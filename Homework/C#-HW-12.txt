@@ -1,0 +1,75 @@
+### Philip Lozano
+### C# Homework 12
+### 17 February 2021
+
+1. Inheritance is a key concept in the world of object-oriented programming. You can use inheritance as a tool to 
+avoid repetition when defi ning different classes that have some features in common and are clearly related to one 
+another but are still different in some important ways.
+
+2.
+```
+class DerivedClass : BaseClass
+{
+...
+}
+```
+
+3. Inheritance applies only to classes, not to structures. You cannot define your own inheritance hierarchy with 
+structures, and you cannot define a structure that derives from a class or another structure. The System.Object class 
+is the root class of all classes. All classes implicitly derive from System.Object.
+
+4. A default constructor is always created by the compiler if the user does not create a constructor for a class.
+
+5. Yes. You can assign an object in a derived class to an object in its base class. The derived class will inherit
+all fields from the base class. However, a limitation of this is that you can only access methods and fields from 
+the base class. All other fields and methods will have to be created in the derived class for its own use.
+
+6. No. You cannot assign an object from a class to another object of a seperate class unless they are part of the 
+same inheritance hierarchy.
+
+7. No. All objects are inherited from all base classes and cannot be assigned to derived variables because it would
+violate the inheritance hierarchy. All objects from the base class are not necessarily a part of the derived class.
+
+8. You should use the *new* keyword to instantiate a new method in a derived class when that methed does not conflict
+with the signature of a method from a base class. The signature refers to the name of the method as well as its 
+number and type of parameters. The return type of the method does not matter for its signature.
+
+9. A method that is intended to be overridden is called a *virtual* method. Virtual methods function as 
+placeholders for more specific methods that can be defined and used more specifically at the derived class level.
+
+10. Overriding a method is a mechanism for providing different implementations of the same method — the methods 
+are all related because they are intended to perform the same task, but in a class-specific manner.
+
+11. You define an extension method in a static class and specify the type to which the method applies
+as the fi rst parameter to the method, along with the this keyword. Here’s an example showing how you
+can implement the Negate extension method for the int type:
+```
+static class Util
+{
+public static int Negate(this int i)
+{
+return -i;
+}
+}
+```
+The syntax looks a little odd, but it is the this keyword prefixing the parameter to Negate that identi-
+fi es it as an extension method, and the fact that the parameter that this prefi xes is an int means that you
+are extending the int type.
+
+12. Using inheritance is not the most appro- priate mechanism for adding new behaviors, especially if you need to 
+quickly extend a type without affecting existing code. Adding a new feature or method to a data type may require you
+to change the data types of existing methods in order to use it. Also, if it is a struct, it will not be 
+inherited because this is a limitation of structures. 
+
+Using an extension method, you can extend an existing type (a class or structure) with additional
+static methods. These static methods become immediately available to your code in any statements
+that reference data of the type being extended.
+
+13. Substitutability is a principle in object-oriented programming stating that, in a computer program, 
+if S is a subtype of T, then objects of type T may be replaced with objects of type S (i.e., an object of 
+type T may be substituted with any object of a subtype S) without altering any of the desirable properties 
+of the program (correctness, task performed, etc.). More formally, the Liskov substitution principle (LSP) is a 
+particular definition of a subtyping relation, called (strong) behavioral subtyping, that was initially introduced 
+by Barbara Liskov in a 1987 conference keynote address titled Data abstraction and hierarchy. It is a semantic 
+rather than merely syntactic relation, because it intends to guarantee semantic interoperability of types in a 
+hierarchy, object types in particular.

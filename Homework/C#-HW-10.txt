@@ -1,0 +1,53 @@
+### Philip Lozano
+### C# Homework 10
+### 10 February 2021
+
+1. An array is an unordered sequence of items. All the items in an array have the same type, unlike the
+fields in a structure or class, which can have different types. The items in an array live in a contiguous
+block of memory and are accessed by using an index, unlike fi elds in a structure or class, which are
+accessed by name.
+
+2. Arrays are reference types, regardless of the type of their elements. This means that an array variable 
+refers to a contiguous block of memory holding the array elements on the heap, just as a class variable refers 
+to an object on the heap.
+
+3. Array reference memory is stored on the stack just like an object reference variable.
+
+4. The element type when you declare an array must match the type of elements that you attempt to
+store in the array.
+
+5. C# provides the foreach statement, with which you can iterate through the elements of an array without 
+worrying about an array starting at value 0 and the last element being numbered *Length*-1. 
+```
+	int[] pins = { 9, 3, 7, 2 };
+	foreach (int pin in pins)
+	{
+		Console.WriteLine(pin);
+	}
+```
+
+6. If the elements in the array being copied contain references, the Clone method simply copies the references 
+rather than the objects being referred to. After copying, both arrays refer to the same set of objects. If you 
+need to create a deep copy of such an array, you must use appropriate code in a for loop.
+
+7. To access an element in the array, you provide two index values to specify the “cell” (the intersection of a 
+row and a column) holding the element. The following code shows some examples using the items array:
+```
+items[2, 3] = 99; // set the element at cell(2,3) to 99
+items[2, 4] = items [2,3]; // copy the element in cell(2, 3) to cell(2, 4)
+items[2, 4]++; // increment the integer value at cell(2, 4)
+```
+This is an array of arrays:
+```
+int[][] items;
+```
+array of arrays—items, instead of being a two-dimensional array, has only a single dimension, but
+the elements in that dimension are themselves arrays.
+
+8. Array of arrays should be used when the program is at risk of running an *OutOfMemoryException*
+
+9. To flatten an array, access the multidimentsional array's total element count, copy the array's elements
+into a 1 dimensional array and loop over each deminsion.
+
+10. If you need to modify the elements of the array, you have to use a for statement. This is because
+the iteration variable of the foreach statement is a read-only copy of each element of the array.
