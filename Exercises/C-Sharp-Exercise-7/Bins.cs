@@ -14,20 +14,32 @@ namespace C_Sharp_Exercise_7
 
         int[] Green = { 0, 00 };
 
-        public Bins(Red r, Black b, Green g)
+        int[][] test = new int[3][];
+
+        //public Bins(int[] Red r, Black b, Green g)
+        //{
+        //    red = r;
+        //    black = b;
+        //    green = g;
+        //}
+
+        public Bins()
         {
-            red = r;
-            black = b;
-            green = g;
+            test[0] = Red;
+            test[1] = Black;
+            test[2] = Green;
+
+
         }
 
+        
+        
 
-        //int[][] Test = new int[3][];
-        //int[] Red = new int[18];
-        //int[] Black = new int[18];
-        //int[] Green = new int[2];
-        //Test[0][1] = 1;
-        //Black[0] = 2;
+        int[] Red = new int[18];
+        int[] Black = new int[18];
+        int[] Green = new int[2];
+        Test[0][1] = 1;
+        Black[0] = 2;
 
     }
 
