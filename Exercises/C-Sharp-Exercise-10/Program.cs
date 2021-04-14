@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace C_Sharp_Exercise_10
+namespace C_Sharp_Exercise_10 
 {
     class Program
     {
@@ -70,7 +70,7 @@ namespace C_Sharp_Exercise_10
             }
             else
                 Console.WriteLine("Error in 'base to convert from'");
-
+                // create loop back to top.
         }
         private static long binaryToDecimal(int number)
         {

@@ -4,7 +4,7 @@ namespace arrayDemo
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args) // This is a class demo only.
         {
             Console.WriteLine("Array Demo");
             int[] phil = { 1, 2, 65, 46, 300, 700, 89, 1000, 3, 67 };

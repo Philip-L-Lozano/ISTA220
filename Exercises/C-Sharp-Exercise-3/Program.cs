@@ -27,7 +27,7 @@ namespace C_Sharp_Excercise_3
             Console.WriteLine("\nPart 4. Solving a Quadratic Equation).");
             Console.Write("Enter 3 integers for the coefficients of a quadratic equation\n");
             (int coefficientAint, int coefficientBint, int coefficientCint) = CalculateQuadratic();
-            double positive_num = (-coefficientBint + Math.Sqrt((coefficientBint * coefficientBint) - (4 * coefficientAint * coefficientCint)));
+            double positive_num = (-coefficientBint + Math.Sqrt((coefficientBint * coefficientBint) - (4 * coefficientAint * coefficientCint))); // simplify later
             double negative_num = (-coefficientBint - Math.Sqrt((coefficientBint * coefficientBint) - (4 * coefficientAint * coefficientCint)));
             double denominator = 2 * coefficientAint;
             Console.WriteLine($"The positive solution is{positive_num / denominator}");

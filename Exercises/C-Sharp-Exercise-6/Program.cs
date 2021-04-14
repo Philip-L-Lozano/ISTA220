@@ -9,7 +9,7 @@ namespace C_Sharp_Exercise_6
         {
             try
             {
-                IssueTheOrder();
+                IssueTheOrder(); 
             }
             catch (Exception ex)
             {
@@ -17,7 +17,7 @@ namespace C_Sharp_Exercise_6
             }
         }
 
-        static void IssueTheOrder()
+        static void IssueTheOrder() // redesign
         {
             Personnel pl = new Personnel();
             Personnel psg = new Personnel();            
